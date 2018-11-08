@@ -1,0 +1,42 @@
+#include <stdlib.h>
+#include <conio.h>
+#include <iomanip>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    awal :
+int A[100][100];
+int n;
+system("cls");
+cout <<"----------------------------------------"<<endl;
+cout <<"+        Nama    : Rizkima Rahmatika +"<<endl;
+cout <<"+        NIM     : 5170411335        +"<<endl;
+cout <<"+        Prodi   : Informatika(F)    +"<<endl;
+cout <<"----------------------------------------"<<endl;
+cout << "Masukan panjang matrik : ";
+cin  >> n;
+//input matrik
+for (int k=0; k<n; k++) {
+    for (int l=0; l<n; l++)
+{
+cout << " [ " <<  k << " ] [ " << l << " ] : ";
+cin >> A[k][l];
+        if(k+l==n-1)
+        {
+            A[k][l]=0;
+        }
+    }
+}
+cout<<endl;
+for(int k=0;k<n;k++){
+    for(int l=0;l<n;l++){
+        cout<<setw(2)<<A[k][l];
+    }
+    cout<<endl;
+}
+getch();
+goto awal;
+}
